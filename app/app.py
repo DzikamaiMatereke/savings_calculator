@@ -11,14 +11,13 @@ google search api: https://pypi.org/project/googlesearch-python/ for querying ta
 import streamlit as st
 import plotly.graph_objects as go
 import numpy as np
-from googlesearch import search
 
 #setting the page title and heading for the webapp
 st.set_page_config(page_title="Savings Calculator")
 st.title("Savings Calculator")
 
 #Headers
-st.header("**Monthly Income**")
+st.header("**Monthly Income!**")
 st.subheader("Salary")
 
 #creating columns: https://docs.streamlit.io/en/stable/api.html?highlight=beta_columns#streamlit.beta_columns
@@ -92,6 +91,9 @@ with colForecast2:
     cumulative_salary_growth = np.cumprod(np.repeat(1 + monthly_growth, forecast_months))
     forecast_salary = monthly_takehome_salary * cumulative_salary_growth 
     
+st.markdown("---")
+
+
 forecast_savings = forecast_salary - forecast_expenses 
 cumulative_savings = np.cumsum(forecast_savings)
 

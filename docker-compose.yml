@@ -5,8 +5,10 @@ services:
     container_name: savings_calculator
     restart: always
     build: ./app
+    #volumes:
+    #        - ./src:/app/src:ro
     ports:
-      - "5000:5000"
+      - "8501:8501"
     command: streamlit run app.py
 
   nginx:
@@ -14,6 +16,6 @@ services:
     restart: always
     build: ./nginx
     ports:
-      - "8080:8080"
+      - "80:80"
     depends_on:
       - app
