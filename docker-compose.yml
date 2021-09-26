@@ -5,8 +5,6 @@ services:
     container_name: savings_calculator
     restart: always
     build: ./app
-    #volumes:
-    #        - ./src:/app/src:ro
     ports:
       - "8501:8501"
     command: streamlit run app.py
