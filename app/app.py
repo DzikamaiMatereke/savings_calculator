@@ -2,6 +2,7 @@
 #Github: 
 #linkedin:  
 #This is built as my 2021 Complete Python Bootcamp From Zero to Hero in Python capstone project
+
 '''this is build using the following libraries: 
 streamlit: https://streamlit.io/ an opem source platform for creating and sharing custom web apps for machine learning and data science with python.
 plotly.graph_objects: https://plotly.com/python-api-reference/generated/plotly.graph_objects.Bar.html#id5 a graphing library for creating charts and graphics. very powerful
