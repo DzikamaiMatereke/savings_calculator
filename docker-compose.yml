@@ -5,8 +5,12 @@ services:
     container_name: savings_calculator
     restart: always
     build: ./app
-    ports:
-      - "8501:8501"
+    #volumes:
+    #        - ./src:/app/src:ro
+    #hiding port to only expose reverse proxy
+  
+    #ports:
+    #  - "8501:8501"
     command: streamlit run app.py
 
   nginx:
