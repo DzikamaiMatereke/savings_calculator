@@ -23,7 +23,7 @@ st.subheader("Salary")
 
 #creating columns: https://docs.streamlit.io/en/stable/api.html?highlight=beta_columns#streamlit.beta_columns
 #colAnnualSal = columnn object named colAnnual Salary
-colAnnualSal, colTax = st.beta_columns(2)
+colAnnualSal, colTax = st.columns(2)
 
 #using the with context manager to manager external resources. auto handling of setup and teardown phases:https://realpython.com/python-with-statement/
 with colAnnualSal:
@@ -38,7 +38,7 @@ salary_after_taxes = salary * (1 - tax_rate)
 monthly_takehome_salary = round(salary_after_taxes / 12.0, 2)
 
 st.header("**Monthly Expenses**")
-colExpenses1, colExpenses2 = st.beta_columns(2)
+colExpenses1, colExpenses2 = st.columns(2)
 
 with colExpenses1:
     st.subheader("Monthly Rental")
@@ -73,7 +73,7 @@ st.subheader("Monthly Savings: $" + str(round(monthly_savings, 2)))
 st.markdown("---")
 
 st.header("**Forecast of your savings Savings**")
-colForecast1, colForecast2 = st.beta_columns(2)
+colForecast1, colForecast2 = st.columns(2)
 with colForecast1:
     st.subheader("Number of years to forecast")
     forecast_year = st.number_input("How many years to forecast (Min 1 year): ", min_value=0,format='%d')
